@@ -1,0 +1,12 @@
+.FooterComponent {
+  margin: auto;
+  width: 900px;
+}
+.legal {
+  text-align: center;
+  color: grey;
+}
+
+.legal p {
+  margin: 0px;
+}
