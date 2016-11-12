@@ -3,8 +3,13 @@
   width: 900px;
 }
 .legal {
+  margin: 10px;
   text-align: center;
   color: grey;
+}
+
+.sponsors {
+  text-align: center;
 }
 
 .legal p {
