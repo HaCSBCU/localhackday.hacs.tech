@@ -1,0 +1,21 @@
+.pageContent {
+  color: black;
+  width: 700px;
+  min-height: 300px;
+  background-color: white;
+  margin: auto;
+  padding: 40px;
+}
+
+.pageGradient {
+  background: -webkit-linear-gradient(left, rgb(241,88,47) , rgb(113,83,163));
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+.page {
+  width: 100%;
+  height: 500px;
+  background-position: bottom center;
+  background-size: cover;
+}
