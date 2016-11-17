@@ -1,33 +1,20 @@
 'use strict';
 
 import React from 'react';
-import PageContent from './PageContentComponent'
-require('styles//Page.css');
+import ReactMarkdown from 'react-markdown';
 
 
 class PageComponent extends React.Component {
   render() {
-    if (this.props.type === 'multi'){
-      const multi = this.props.multi
-      const listItems = multi.map( (multi) =>
-        <PageContent type="multi" title={multi.title} content={multi.content}/>
-      );
-      return(
-        <div className="page">
-          <div className="pageGradient">
-            {listItems}
-          </div>
+    return (
+      <div className="center">
+        <div className={this.props.type + 'Content'}>
+          <h1>{this.props.title}</h1>
+            <ReactMarkdown source={this.props.content} className="pageMDContent"/>
         </div>
-      )
-    }else {
-      return (
-        <div className="page">
-          <div className="pageGradient">
-            <PageContent type="page" title={this.props.title} content={this.props.content}/>
-          </div>
-        </div>
-      );
-    }
+      </div>
+
+    );
   }
 }
 

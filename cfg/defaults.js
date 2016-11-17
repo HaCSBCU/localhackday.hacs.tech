@@ -51,6 +51,10 @@ function getDefaultModules() {
       {
         test: /\.(mp4|ogg|svg)$/,
         loader: 'file-loader'
+      },
+      {//added as a dependency for react-markdown
+            test: /\.json$/,
+            loader: 'json'
       }
     ]
   };
