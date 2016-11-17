@@ -2,8 +2,8 @@
 
 import React from 'react';
 import PageContent from './PageContentComponent'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 require('styles//Page.css');
-
 
 class PageComponent extends React.Component {
   render() {
@@ -13,11 +13,15 @@ class PageComponent extends React.Component {
         <PageContent type="multi" title={multi.title} content={multi.content}/>
       );
       return(
-        <div className="page">
-          <div className="pageGradient">
-            {listItems}
+        <ReactCSSTransitionGroup transitionName = "page"
+   transitionAppear = {true} transitionAppearTimeout = {500}
+   transitionEnter = {false} transitionLeave = {false}>
+          <div className="page">
+            <div className="pageGradient">
+              {listItems}
+            </div>
           </div>
-        </div>
+      </ReactCSSTransitionGroup>
       )
     }else {
       return (
