@@ -16,3 +16,17 @@
 .legal p {
   margin: 0px;
 }
+
+@media (max-width: 900px) {
+  .FooterComponent {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .FooterComponent h1 {
+    font-size: 30px;
+  }
+
+  .legal p {
+    font-size: 11px;
+  }
+}

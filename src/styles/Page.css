@@ -1,15 +1,5 @@
-.pageContent {
-  color: black;
-  width: 700px;
-  min-height: 300px;
-  background-color: white;
-  margin: auto;
-  padding: 40px;
-  text-align: left;
-}
 
 .center {
-  width: 920px;
   margin: auto;
   text-align: center;
 }
@@ -18,27 +8,44 @@
   background: -webkit-linear-gradient(left, rgb(241,88,47) , rgb(113,83,163));
   width: 100%;
   height: 100%;
-  padding-top: 60px;
+  padding-top: 10px;
 }
 .page {
   width: 100%;
-  height: 500px;
   background-position: bottom center;
   background-size: cover;
 }
+
+.pageContent {
+  color: black;
+  width: 700px;
+  min-height: 300px;
+  background-color: white;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+  text-align: left;
+}
+
 
 .pageMDContent {
   font-size: 18px;
   line-height:25px;
 }
-
+.multi{
+  display: flex;
+}
+.multi span{
+  display: flex;
+  overflow-x: auto;
+}
 .multiContent {
   color: black;
   width: 350px;
   background-color: white;
   padding: 20px;
   margin: 30px;
-  float:left;
   text-align:left;
 }
 
@@ -46,11 +53,24 @@
   margin-top: 0;
 }
 
-.page-appear {
-   opacity: 0.01;
-}
-
-.page-appear.page-appear-active {
-   opacity: 1;
-   transition: opacity 500ms ease-in;
+@media (max-width: 900px){
+  .center {
+  }
+  .multi {
+    margin:auto;
+  }
+  .multi span {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    overflow: none;
+  }
+  .multiContent {
+    margin: 5px;
+  }
+  .pageContent {
+    padding:20px;
+    width: 90%;
+    height: 700px;
+  }
 }

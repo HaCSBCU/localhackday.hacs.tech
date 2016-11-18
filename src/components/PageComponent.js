@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PageContent from './PageContentComponent'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import AnimationComponent from './AnimationComponent'
 require('styles//Page.css');
 
 class PageComponent extends React.Component {
@@ -13,22 +13,23 @@ class PageComponent extends React.Component {
         <PageContent type="multi" title={multi.title} content={multi.content}/>
       );
       return(
-        <ReactCSSTransitionGroup transitionName = "page"
-   transitionAppear = {true} transitionAppearTimeout = {500}
-   transitionEnter = {false} transitionLeave = {false}>
           <div className="page">
             <div className="pageGradient">
-              {listItems}
+              <div className="multi">
+              <AnimationComponent child={listItems} />
+              </div>
             </div>
           </div>
-      </ReactCSSTransitionGroup>
+
       )
     }else {
       return (
         <div className="page">
           <div className="pageGradient">
-            <PageContent type="page" title={this.props.title} content={this.props.content}/>
-          </div>
+
+            <AnimationComponent child={<PageContent type="page" title={this.props.title} content={this.props.content}/>} />
+
+        </div>
         </div>
       );
     }

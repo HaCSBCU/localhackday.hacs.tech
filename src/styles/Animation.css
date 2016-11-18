@@ -1,0 +1,8 @@
+.Animation-appear {
+   opacity: 0.01;
+}
+
+.Animation-appear.Animation-appear-active {
+   opacity: 1;
+   transition: opacity 500ms ease-in;
+}

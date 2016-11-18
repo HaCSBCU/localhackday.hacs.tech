@@ -3,6 +3,7 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
 require('styles/Index.css')
+const faq = require('./faq.json')
 
 import Hero from './HeroIndexComponent'
 import Page from './PageComponent'
@@ -20,18 +21,9 @@ Local Hack Day is a 12 hour hack day on your school's campus that brings togethe
 
 var PageFaq = React.createClass({
   render: function() {
-    const arr = [{
-      title: 'Hello',
-      content: 'test'
-    },
-    {
-      title: 'Number two',
-      content: 'another test'
-    }
-  ]
     return (
       <div>
-        <Page type="multi" multi={arr}/>
+        <Page type="multi" multi={faq}/>
     </div>
   )
   }
