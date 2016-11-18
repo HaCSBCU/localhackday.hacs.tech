@@ -22,7 +22,7 @@ class HeroComponent extends React.Component {
                     <img src="/images/localhack-day.svg"></img>
                   </div>
                   <div className="heroContentButtons">
-                    <button>Attend</button>
+                    <a href="http://bit.ly/localhackdaybcu"><button>Attend</button></a>
                   </div>
                 </div>
               } />

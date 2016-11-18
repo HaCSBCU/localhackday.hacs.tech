@@ -3,11 +3,28 @@ import React from 'react';
 
 require('styles//Nav.css');
 
-const links = ['home', 'about', 'faq', 'attend', 'contact'];
+const links = [
+  {
+    display: 'home',
+    link: '/#/home'
+  },
+  {
+    display: 'about',
+    link: '/#/about'
+  },
+  {
+    display: 'faq',
+    link: '/#/faq'
+  },
+  {
+    display: 'attend',
+    link: 'http://bit.ly/localhackdaybcu'
+  }
+]
 //build list of links
 //reverse handles float:right error with css
 const listItems = links.reverse().map((links) =>
-  <li key={links.id}><a href={'/#/' + links}>{links}</a></li>
+  <li key={links.display}><a href={links.link}>{links.display}</a></li>
 );
 
 class NavComponent extends React.Component {
