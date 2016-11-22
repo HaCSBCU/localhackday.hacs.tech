@@ -39,6 +39,7 @@
   font-size: 28px;
   width: 180px;
   height: 70px;
+  transition: all 0.2s ease;
 }
 
 .heroContentButtons button:hover {

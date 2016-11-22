@@ -5,8 +5,9 @@
   "main": "",
   "scripts": {
     "clean": "rimraf dist/*",
-    "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
-    "dist": "npm run copy & webpack --env=dist",
+    "copy": "copyfiles -f ./src/index.html ./src/express.js ./src/favicon.ico ./dist",
+    "dist": "npm run copy & node ./node_modules/webpack/bin/webpack.js --env=dist && node ./dist/express.js",
+    "express": "copyfiles -f ./src/express.js ./dist && node ./dist/express.js",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
     "release:major": "npm version major && npm publish && git push --follow-tags",
@@ -20,7 +21,7 @@
   },
   "repository": "",
   "keywords": [],
-  "author": "Your name here",
+  "author": "Pandelis Zembashis",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-eslint": "^6.0.0",
@@ -62,6 +63,7 @@
   },
   "dependencies": {
     "core-js": "^2.0.0",
+    "express": "^4.14.0",
     "json-loader": "^0.5.4",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",

@@ -24,8 +24,11 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: all 0.5s ease;
 }
 
-.NavComponent a:hover {
-  background-color: orange;
+.NavComponent li a:hover {
+  background-color: #ff9000;
+  letter-spacing: 2px;
+  text-decoration: underline;
 }
