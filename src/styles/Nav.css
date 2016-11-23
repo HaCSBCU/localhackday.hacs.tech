@@ -28,7 +28,7 @@
 }
 
 .NavComponent li a:hover {
-  background-color: #ff9000;
+  background-color: #ff5a00;
   letter-spacing: 2px;
   text-decoration: underline;
 }
