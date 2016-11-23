@@ -27,7 +27,8 @@ let config = Object.assign({}, baseConfig, {
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
     new CopyWebpackPlugin([
-      { from: './src/images', to: '../images' }
+      { from: './src/images', to: '../images' },
+      { from: './prod_env', to: '../'}
     ])
   ],
   module: defaultSettings.getDefaultModules()

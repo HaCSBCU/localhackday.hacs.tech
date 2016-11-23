@@ -6,10 +6,11 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/express.js ./src/favicon.ico ./dist",
-    "dist": "npm run copy & node ./node_modules/webpack/bin/webpack.js --env=dist && node ./dist/express.js",
+    "dist": "npm run copy & node ./node_modules/webpack/bin/webpack.js --env=dist",
     "express": "copyfiles -f ./src/express.js ./dist && node ./dist/express.js",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
+    "production": "npm run dist && cd dist && eb deploy production",
     "release:major": "npm version major && npm publish && git push --follow-tags",
     "release:minor": "npm version minor && npm publish && git push --follow-tags",
     "release:patch": "npm version patch && npm publish && git push --follow-tags",

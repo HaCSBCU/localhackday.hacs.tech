@@ -5,6 +5,9 @@ const dir = __dirname + '/'
 
 app.use('/assets', express.static(dir + 'assets'))
 app.use('/images', express.static(dir + 'images'))
+app.get('/favicon.ico', (req,res)=>{
+  res.sendFile(dir + 'favicon.ico')
+})
 app.get('/*',function(req,res){
 
      res.sendFile(dir + 'index.html');

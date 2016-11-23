@@ -1,0 +1,13 @@
+branch-defaults:
+  default:
+    environment: production
+    group_suffix: null
+global:
+  application_name: localhackday
+  branch: null
+  default_ec2_keyname: hackkings
+  default_platform: Node.js
+  default_region: eu-west-1
+  profile: eb-cli
+  repository: null
+  sc: null
