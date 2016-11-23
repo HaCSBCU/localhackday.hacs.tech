@@ -13,7 +13,7 @@ const sponsor = [{
   link: 'http://bcu.ac.uk'
 }]
 const sponsors = sponsor.map((sponsor) =>
-  <img style={sponsor.style} key={sponsor.name} alt={sponsor.name} src={'images/sponsors/' + sponsor.image}></img>
+  <a href={sponsor.link}><img style={sponsor.style} key={sponsor.name} alt={sponsor.name} src={'images/sponsors/' + sponsor.image}></img></a>
 )
 
 class FooterComponent extends React.Component {
