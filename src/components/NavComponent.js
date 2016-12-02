@@ -13,6 +13,10 @@ const links = [
     link: '/#/about'
   },
   {
+    display: 'getting there',
+    link: '/#/map'
+  },
+  {
     display: 'faq',
     link: '/#/faq'
   },

@@ -7,6 +7,10 @@ const faq = require('./faq.json')
 
 import Hero from './HeroIndexComponent'
 import Page from './PageComponent'
+import Map from './LocationComponent'
+import GoogleMap from 'google-map-react';
+
+
 import React from 'react';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 
@@ -29,6 +33,16 @@ var PageFaq = React.createClass({
   }
 });
 
+var LocationComponent = React.createClass({
+  render: function(){
+    return(
+      <div style={{height:'500px'}}>
+        <Map />
+      </div>
+    )
+  }
+})
+
 class App extends React.Component {
   render() {
     return (
@@ -37,7 +51,8 @@ class App extends React.Component {
         <Route path='home' component={Hero} />
         <Route path='about' component={PageAbout} />
         <Route path='faq' component={PageFaq} />
-      </Router>
+        <Route path='map' component={LocationComponent} />
+    </Router>
     )
   }
 }
