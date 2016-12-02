@@ -1,7 +1,7 @@
 .FooterComponent {
   margin: auto;
-  margin-top: 70px;
   width: 900px;
+  text-align: center;
 }
 .legal {
   margin: 10px;
@@ -10,7 +10,17 @@
 }
 
 .sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 800px;
+  margin: auto;
+}
+
+
+.sponsors img {
   text-align: center;
+  padding: 5px;
 }
 
 .legal p {
@@ -24,6 +34,10 @@
   }
   .FooterComponent h1 {
     font-size: 30px;
+  }
+
+  .sponsors {
+    width: 100%;
   }
 
   .legal p {

@@ -5,24 +5,41 @@ import React from 'react';
 require('styles//Footer.css');
 
 const sponsor = [{
-  name: 'Birmingham City University',
-  image: 'bcu.jpg',
+  name: 'Nexmo',
+  image: 'nexmo.jpg',
   style: {
     width: 400
   },
+  link: 'https://www.nexmo.com/'
+},
+{
+  name: 'Packt',
+  image: 'packt.jpg',
+  style: {
+    width: 328
+  },
+  link: 'https://www.packtpub.com/'
+},
+{
+  name: 'Birmingham City University',
+  image: 'bcu.jpg',
+  style: {
+    width: 300
+  },
   link: 'http://bcu.ac.uk'
-}]
+}
+]
 const sponsors = sponsor.map((sponsor) =>
-  <a href={sponsor.link}><img style={sponsor.style} key={sponsor.name} alt={sponsor.name} src={'images/sponsors/' + sponsor.image}></img></a>
+  <a className='sponsorLink' href={sponsor.link}><img style={sponsor.style} key={sponsor.name} alt={sponsor.name} src={'images/sponsors/' + sponsor.image}></img></a>
 )
 
 class FooterComponent extends React.Component {
   render() {
     return (
       <div className="FooterComponent">
-        <div className='sponsors'>
+        <div className='FooterContainer'>
           <h1>LocalHackDay Birmingham is made possible thanks to:</h1>
-          {sponsors}
+          <div className='sponsors'>{sponsors}</div>
         </div>
         <div className='legal'>
           <p>&copy; 2016 Hackathon and Computing Society at BCU All Rights Reserved.</p>
