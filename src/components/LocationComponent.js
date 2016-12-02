@@ -16,7 +16,7 @@ var createMapOptions = (maps) => {
       panControl: false,
       mapTypeControl: false,
       scrollwheel: false,
-      styles: [{'elementType':'labels','stylers':[{'visibility':'off'},{'color':'#f49f53'}]},{'featureType':'landscape','stylers':[{'color':'#f9ddc5'},{'lightness':-7}]},{'featureType':'road','stylers':[{'color':'#813033'},{'lightness':43}]},{'featureType':'poi.business','stylers':[{'color':'#645c20'},{'lightness':38}]},{'featureType':'water','stylers':[{'color':'#1994bf'},{'saturation':-69},{'gamma':0.99},{'lightness':43}]},{'featureType':'road.local','elementType':'geometry.fill','stylers':[{'color':'#f19f53'},{'weight':1.3},{'visibility':'on'},{'lightness':16}]},{'featureType':'poi.business'},{'featureType':'poi.park','stylers':[{'color':'#645c20'},{'lightness':39}]},{'featureType':'poi.school','stylers':[{'color':'#a95521'},{'lightness':35}]},{},{'featureType':'poi.medical','elementType':'geometry.fill','stylers':[{'color':'#813033'},{'lightness':38},{'visibility':'off'}]},{},{},{},{},{},{},{},{},{},{},{},{'elementType':'labels'},{'featureType':'poi.sports_complex','stylers':[{'color':'#9e5916'},{'lightness':32}]},{},{'featureType':'poi.government','stylers':[{'color':'#9e5916'},{'lightness':46}]},{'featureType':'transit.station','stylers':[{'visibility':'off'}]},{'featureType':'transit.line','stylers':[{'color':'#813033'},{'lightness':22}]},{'featureType':'transit','stylers':[{'lightness':38}]},{'featureType':'road.local','elementType':'geometry.stroke','stylers':[{'color':'#f19f53'},{'lightness':-10}]},{},{},{}]
+      styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#ff6800"},{"saturation":"20"},{"lightness":"-8"},{"gamma":"1.00"},{"weight":"1.12"}]}]
     }
   }
 
@@ -34,9 +34,8 @@ export default class SimpleMapPage extends Component {
         defaultCenter={{lat: 52.4792368, lng: -1.8955242}}
         defaultZoom={15}
       >
-    <Pointer lat={52.4792368} lng={-1.8955242} type='highlight' text={'LocalHackDay'} />
-    <Pointer lat={52.4859368} lng={-1.8955242} text={'Station'} />
-    <Pointer lat={52.4859368} lng={-1.8955242} text={'Birmingham City University'} />
+    <Pointer lat={52.4831523} lng={-1.8834127} type='highlight' text={'LocalHackDay'} />
+    <Pointer lat={52.477675} lng={-1.8981037} text={'Station'} />
      </GoogleMap>
 
     );
